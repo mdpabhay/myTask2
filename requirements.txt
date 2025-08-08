@@ -4,3 +4,4 @@ python-dotenv
 PyGithub
 mosspy
 pydantic
+datasketch
