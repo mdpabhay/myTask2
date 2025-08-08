@@ -12,6 +12,7 @@ from typing import List, Tuple, Dict, Any, Optional
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, HttpUrl
 from dotenv import load_dotenv
+from datasketch import MinHash
 
 # Optional heavy dependencies:
 try:
@@ -436,3 +437,4 @@ async def evaluate(req: EvalRequest):
 @app.get("/")
 def root():
     return {"message": "Plagiarism Detector up. POST /evaluate/ with {github_url, question}."}
+
